@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Memory-Mapped File Technique for all I/O</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text56.html">Back</a> <a href="text58.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img57.html">Image</a></center><br>
+<h1><b><font color="#006699">Memory-Mapped File Technique for all I/O</b></font></h1>
+<ul>
+<li>Some OSes  uses memory mapped files for standard I/O</li>
+<li>Process can explicitly request memory mapping a file via mmap() system call</li>
+<ul>
+<li>Now file mapped into process address space</li>
+</ul>
+<li>For standard I/O (open(), read(), write(), close()), mmap anyway</li>
+<ul>
+<li>But map file into kernel address space</li>
+<li>Process still does read() and write()</li>
+<ul>
+<li>Copies data to and from kernel space and user space</li>
+</ul>
+<li>Uses efficient memory management subsystem</li>
+<ul>
+<li>Avoids needing separate subsystem</li>
+</ul>
+</ul>
+<li>COW can be used for read/write non-shared pages</li>
+<li>Memory mapped files can be  used for shared memory (although again via separate system calls)</li>
+</ul>
+</body>
+</html>

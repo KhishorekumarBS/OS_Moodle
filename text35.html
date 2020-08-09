@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>LRU Algorithm (Cont.)</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text34.html">Back</a> <a href="text36.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img35.html">Image</a></center><br>
+<h1><b><font color="#006699">LRU Algorithm (Cont.)</b></font></h1>
+<ul>
+<li>Counter implementation</li>
+<ul>
+<li>Every page entry has a counter; every time page is referenced through this entry, copy the clock into the counter</li>
+<li>When a page needs to be changed, look at the counters to find smallest value</li>
+<ul>
+<li>Search through table needed</li>
+</ul>
+</ul>
+<li>Stack implementation</li>
+<ul>
+<li>Keep a stack of page numbers in a double link form:</li>
+<li>Page referenced:</li>
+<ul>
+<li>move it to the top</li>
+<li>requires 6 pointers to be changed</li>
+</ul>
+<li>But each update more expensive</li>
+<li>No search for replacement</li>
+</ul>
+<li>LRU and OPT are cases of <b><font color="#3366FF">stack algorithms </b></font>that don’t have Belady’s Anomaly</li>
+</ul>
+</body>
+</html>

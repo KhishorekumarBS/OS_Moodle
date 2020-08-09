@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Performance of Demand Paging</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text16.html">Back</a> <a href="text18.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img17.html">Image</a></center><br>
+<h1><b><font color="#006699">Performance of Demand Paging</b></font></h1>
+<ul>
+<li>Stages in Demand Paging (worse case)</li>
+<li>Trap to the operating system</li>
+<li>Save the user registers and process state</li>
+<li>Determine that the interrupt was a page fault</li>
+<li>Check that the page reference was legal and determine the location of the page on the disk</li>
+<li>Issue a read from the disk to a free frame:</li>
+<ul>
+<li>Wait in a queue for this device until the read request is serviced</li>
+<li>Wait for the device seek and/or latency time</li>
+<li>Begin the transfer of the page to a free frame</li>
+</ul>
+<li>While waiting, allocate the CPU to some other user</li>
+<li>Receive an interrupt from the disk I/O subsystem (I/O completed)</li>
+<li>Save the registers and process state for the other user</li>
+<li>Determine that the interrupt was from the disk</li>
+<li>Correct the page table and other tables to show page is now in memory</li>
+<li>Wait for the CPU to be allocated to this process again</li>
+<li>Restore the user registers, process state, and new page table, and then resume the interrupted instruction</li>
+</ul>
+</body>
+</html>

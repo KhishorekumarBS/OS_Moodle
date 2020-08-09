@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Other Considerations -- Prepaging</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text67.html">Back</a> <a href="text69.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img68.html">Image</a></center><br>
+<h1><b><font color="#006699">Other Considerations -- Prepaging</b></font></h1>
+<ul>
+<li>Prepaging </li>
+<ul>
+<li>To reduce the large number of page faults that occurs at process startup</li>
+<li>Prepage all or some of the pages a process will need, before they are referenced</li>
+<li>But if prepaged pages are unused, I/O and memory was wasted</li>
+<li>Assume <i>s</i> pages are prepaged and <i>α </i>of the pages is used</li>
+<ul>
+<li>Is cost of <i><b>s * α  </b></i>save pages faults &gt; or &lt; than the cost of prepaging<i> 
+<b>s * (1- α) </b></i>unnecessary pages<i>?  </i></li>
+<li><i><b>α</b> </i>near zero  prepaging loses </li>
+</ul>
+</ul>
+</ul>
+</body>
+</html>

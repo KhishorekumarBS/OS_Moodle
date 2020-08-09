@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Buddy System</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text61.html">Back</a> <a href="text63.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img62.html">Image</a></center><br>
+<h1><b><font color="#006699">Buddy System</b></font></h1>
+<ul>
+<li>Allocates memory from fixed-size segment consisting of physically-contiguous pages</li>
+<li>Memory allocated using <b><font color="#3366FF">power-of-2 allocator</b></font></li>
+<ul>
+<li>Satisfies requests in units sized as power of 2</li>
+<li>Request rounded up to next highest power of 2</li>
+<li>When smaller allocation needed than is available, current chunk split into two buddies of next-lower power of 2</li>
+<ul>
+<li>Continue until appropriate sized chunk available</li>
+</ul>
+</ul>
+<li>For example, assume 256KB chunk available, kernel requests 21KB</li>
+<ul>
+<li>Split into AL and AR of 128KB each</li>
+<ul>
+<li>One further divided into BL and BR of 64KB</li>
+<ul>
+<li>One further into CL and CR of 32KB each – one used to satisfy request</li>
+</ul>
+</ul>
+</ul>
+<li>Advantage – quickly <b><font color="#3366FF">coalesce</b></font> unused chunks into larger chunk</li>
+<li>Disadvantage - fragmentation</li>
+</ul>
+</body>
+</html>

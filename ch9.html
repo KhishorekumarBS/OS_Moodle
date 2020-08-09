@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Chapter 9:  Virtual Memory</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<h2><a href="img0.html">Click here to start</a></h2>
+</center>
+<center><table width="90%"><tr>
+<td valign="top" align="left" width="25%">
+<h3>Table of contents</h3><div align="left"><a href="img0.html">Chapter 9:  Virtual Memory</a></div>
+<div align="left"><a href="img1.html">Slide 2</a></div>
+<div align="left"><a href="img2.html">Objectives</a></div>
+<div align="left"><a href="img3.html">Background</a></div>
+<div align="left"><a href="img4.html">Background (Cont.)</a></div>
+<div align="left"><a href="img5.html">Slide 6</a></div>
+<div align="left"><a href="img6.html">Virtual Memory That is Larger Than Physical Memory</a></div>
+<div align="left"><a href="img7.html">Virtual-address Space</a></div>
+<div align="left"><a href="img8.html">Shared Library Using Virtual Memory</a></div>
+<div align="left"><a href="img9.html">Demand Paging</a></div>
+<div align="left"><a href="img10.html">Basic Concepts</a></div>
+<div align="left"><a href="img11.html">Valid-Invalid Bit</a></div>
+<div align="left"><a href="img12.html">Page Table When Some Pages Are Not in Main Memory</a></div>
+<div align="left"><a href="img13.html">Page Fault</a></div>
+<div align="left"><a href="img14.html">Steps in Handling a Page Fault</a></div>
+<div align="left"><a href="img15.html">Aspects of Demand Paging</a></div>
+<div align="left"><a href="img16.html">Instruction Restart</a></div>
+<div align="left"><a href="img17.html">Performance of Demand Paging</a></div>
+<div align="left"><a href="img18.html">Performance of Demand Paging (Cont.)</a></div>
+<div align="left"><a href="img19.html">Demand Paging Example</a></div>
+<div align="left"><a href="img20.html">Demand Paging Optimizations</a></div>
+<div align="left"><a href="img21.html">Copy-on-Write</a></div>
+<div align="left"><a href="img22.html">Before Process 1 Modifies Page C</a></div>
+<div align="left"><a href="img23.html">After Process 1 Modifies Page C</a></div>
+<div align="left"><a href="img24.html">What Happens if There is no Free Frame?</a></div>
+<div align="left"><a href="img25.html">Page Replacement</a></div>
+<div align="left"><a href="img26.html">Need For Page Replacement</a></div>
+<div align="left"><a href="img27.html">Basic Page Replacement</a></div>
+<div align="left"><a href="img28.html">Slide 29</a></div>
+<div align="left"><a href="img29.html">Page and Frame Replacement Algorithms</a></div>
+<div align="left"><a href="img30.html">Graph of Page Faults Versus The Number of Frames</a></div>
+<div align="left"><a href="img31.html">First-In-First-Out (FIFO) Algorithm</a></div>
+<div align="left"><a href="img32.html">FIFO Illustrating Belady’s Anomaly</a></div>
+<div align="left"><a href="img33.html">Optimal Algorithm</a></div>
+<div align="left"><a href="img34.html">Least Recently Used (LRU) Algorithm</a></div>
+<div align="left"><a href="img35.html">LRU Algorithm (Cont.)</a></div>
+<div align="left"><a href="img36.html">Use Of A Stack to Record Most Recent Page References</a></div>
+<div align="left"><a href="img37.html">LRU Approximation Algorithms</a></div>
+<div align="left"><a href="img38.html">Second-Chance (clock) Page-Replacement Algorithm</a></div>
+<div align="left"><a href="img39.html">Enhanced Second-Chance Algorithm</a></div>
+<div align="left"><a href="img40.html">Counting Algorithms</a></div>
+<div align="left"><a href="img41.html">Page-Buffering Algorithms</a></div>
+<div align="left"><a href="img42.html">Applications and Page Replacement</a></div>
+<div align="left"><a href="img43.html">Allocation of Frames</a></div>
+<div align="left"><a href="img44.html">Fixed Allocation</a></div>
+<div align="left"><a href="img45.html">Priority Allocation</a></div>
+<div align="left"><a href="img46.html">Global vs. Local Allocation</a></div>
+<div align="left"><a href="img47.html">Non-Uniform Memory Access</a></div>
+<div align="left"><a href="img48.html">Thrashing</a></div>
+<div align="left"><a href="img49.html">Thrashing (Cont.)</a></div>
+<div align="left"><a href="img50.html">Demand Paging and Thrashing </a></div>
+<div align="left"><a href="img51.html">Locality In A Memory-Reference Pattern</a></div>
+<div align="left"><a href="img52.html">Working-Set Model</a></div>
+<div align="left"><a href="img53.html">Keeping Track of the Working Set</a></div>
+<div align="left"><a href="img54.html">Page-Fault Frequency</a></div>
+<div align="left"><a href="img55.html">Working Sets and Page Fault Rates</a></div>
+<div align="left"><a href="img56.html">Memory-Mapped Files</a></div>
+<div align="left"><a href="img57.html">Memory-Mapped File Technique for all I/O</a></div>
+<div align="left"><a href="img58.html">Memory Mapped Files</a></div>
+<div align="left"><a href="img59.html">Shared Memory via Memory-Mapped I/O</a></div>
+<div align="left"><a href="img60.html">Shared Memory in Windows API</a></div>
+<div align="left"><a href="img61.html">Allocating Kernel Memory</a></div>
+<div align="left"><a href="img62.html">Buddy System</a></div>
+<div align="left"><a href="img63.html">Buddy System Allocator</a></div>
+<div align="left"><a href="img64.html">Slab Allocator</a></div>
+<div align="left"><a href="img65.html">Slab Allocation</a></div>
+<div align="left"><a href="img66.html">Slab Allocator in Linux</a></div>
+<div align="left"><a href="img67.html">Slab Allocator in Linux (Cont.)</a></div>
+<div align="left"><a href="img68.html">Other Considerations -- Prepaging</a></div>
+<div align="left"><a href="img69.html">Other Issues – Page Size</a></div>
+<div align="left"><a href="img70.html">Other Issues – TLB Reach </a></div>
+<div align="left"><a href="img71.html">Other Issues – Program Structure</a></div>
+<div align="left"><a href="img72.html">Other Issues – I/O interlock</a></div>
+<div align="left"><a href="img73.html">Operating System Examples</a></div>
+<div align="left"><a href="img74.html">Windows</a></div>
+<div align="left"><a href="img75.html">Solaris </a></div>
+<div align="left"><a href="img76.html">Solaris 2 Page Scanner</a></div>
+<div align="left"><a href="img77.html">End of Chapter 9</a></div>
+</td>
+<td valign="top" align="left" width="75%">
+<a href="img0.html"><img src="thumb0.png" width="256" height="192" alt="Chapter 9:  Virtual Memory"></a>
+<a href="img1.html"><img src="thumb1.png" width="256" height="192" alt="Slide 2"></a>
+<a href="img2.html"><img src="thumb2.png" width="256" height="192" alt="Objectives"></a>
+<a href="img3.html"><img src="thumb3.png" width="256" height="192" alt="Background"></a>
+<a href="img4.html"><img src="thumb4.png" width="256" height="192" alt="Background (Cont.)"></a>
+<a href="img5.html"><img src="thumb5.png" width="256" height="192" alt="Slide 6"></a>
+<a href="img6.html"><img src="thumb6.png" width="256" height="192" alt="Virtual Memory That is Larger Than Physical Memory"></a>
+<a href="img7.html"><img src="thumb7.png" width="256" height="192" alt="Virtual-address Space"></a>
+<a href="img8.html"><img src="thumb8.png" width="256" height="192" alt="Shared Library Using Virtual Memory"></a>
+<a href="img9.html"><img src="thumb9.png" width="256" height="192" alt="Demand Paging"></a>
+<a href="img10.html"><img src="thumb10.png" width="256" height="192" alt="Basic Concepts"></a>
+<a href="img11.html"><img src="thumb11.png" width="256" height="192" alt="Valid-Invalid Bit"></a>
+<a href="img12.html"><img src="thumb12.png" width="256" height="192" alt="Page Table When Some Pages Are Not in Main Memory"></a>
+<a href="img13.html"><img src="thumb13.png" width="256" height="192" alt="Page Fault"></a>
+<a href="img14.html"><img src="thumb14.png" width="256" height="192" alt="Steps in Handling a Page Fault"></a>
+<a href="img15.html"><img src="thumb15.png" width="256" height="192" alt="Aspects of Demand Paging"></a>
+<a href="img16.html"><img src="thumb16.png" width="256" height="192" alt="Instruction Restart"></a>
+<a href="img17.html"><img src="thumb17.png" width="256" height="192" alt="Performance of Demand Paging"></a>
+<a href="img18.html"><img src="thumb18.png" width="256" height="192" alt="Performance of Demand Paging (Cont.)"></a>
+<a href="img19.html"><img src="thumb19.png" width="256" height="192" alt="Demand Paging Example"></a>
+<a href="img20.html"><img src="thumb20.png" width="256" height="192" alt="Demand Paging Optimizations"></a>
+<a href="img21.html"><img src="thumb21.png" width="256" height="192" alt="Copy-on-Write"></a>
+<a href="img22.html"><img src="thumb22.png" width="256" height="192" alt="Before Process 1 Modifies Page C"></a>
+<a href="img23.html"><img src="thumb23.png" width="256" height="192" alt="After Process 1 Modifies Page C"></a>
+<a href="img24.html"><img src="thumb24.png" width="256" height="192" alt="What Happens if There is no Free Frame?"></a>
+<a href="img25.html"><img src="thumb25.png" width="256" height="192" alt="Page Replacement"></a>
+<a href="img26.html"><img src="thumb26.png" width="256" height="192" alt="Need For Page Replacement"></a>
+<a href="img27.html"><img src="thumb27.png" width="256" height="192" alt="Basic Page Replacement"></a>
+<a href="img28.html"><img src="thumb28.png" width="256" height="192" alt="Slide 29"></a>
+<a href="img29.html"><img src="thumb29.png" width="256" height="192" alt="Page and Frame Replacement Algorithms"></a>
+<a href="img30.html"><img src="thumb30.png" width="256" height="192" alt="Graph of Page Faults Versus The Number of Frames"></a>
+<a href="img31.html"><img src="thumb31.png" width="256" height="192" alt="First-In-First-Out (FIFO) Algorithm"></a>
+<a href="img32.html"><img src="thumb32.png" width="256" height="192" alt="FIFO Illustrating Belady’s Anomaly"></a>
+<a href="img33.html"><img src="thumb33.png" width="256" height="192" alt="Optimal Algorithm"></a>
+<a href="img34.html"><img src="thumb34.png" width="256" height="192" alt="Least Recently Used (LRU) Algorithm"></a>
+<a href="img35.html"><img src="thumb35.png" width="256" height="192" alt="LRU Algorithm (Cont.)"></a>
+<a href="img36.html"><img src="thumb36.png" width="256" height="192" alt="Use Of A Stack to Record Most Recent Page References"></a>
+<a href="img37.html"><img src="thumb37.png" width="256" height="192" alt="LRU Approximation Algorithms"></a>
+<a href="img38.html"><img src="thumb38.png" width="256" height="192" alt="Second-Chance (clock) Page-Replacement Algorithm"></a>
+<a href="img39.html"><img src="thumb39.png" width="256" height="192" alt="Enhanced Second-Chance Algorithm"></a>
+<a href="img40.html"><img src="thumb40.png" width="256" height="192" alt="Counting Algorithms"></a>
+<a href="img41.html"><img src="thumb41.png" width="256" height="192" alt="Page-Buffering Algorithms"></a>
+<a href="img42.html"><img src="thumb42.png" width="256" height="192" alt="Applications and Page Replacement"></a>
+<a href="img43.html"><img src="thumb43.png" width="256" height="192" alt="Allocation of Frames"></a>
+<a href="img44.html"><img src="thumb44.png" width="256" height="192" alt="Fixed Allocation"></a>
+<a href="img45.html"><img src="thumb45.png" width="256" height="192" alt="Priority Allocation"></a>
+<a href="img46.html"><img src="thumb46.png" width="256" height="192" alt="Global vs. Local Allocation"></a>
+<a href="img47.html"><img src="thumb47.png" width="256" height="192" alt="Non-Uniform Memory Access"></a>
+<a href="img48.html"><img src="thumb48.png" width="256" height="192" alt="Thrashing"></a>
+<a href="img49.html"><img src="thumb49.png" width="256" height="192" alt="Thrashing (Cont.)"></a>
+<a href="img50.html"><img src="thumb50.png" width="256" height="192" alt="Demand Paging and Thrashing "></a>
+<a href="img51.html"><img src="thumb51.png" width="256" height="192" alt="Locality In A Memory-Reference Pattern"></a>
+<a href="img52.html"><img src="thumb52.png" width="256" height="192" alt="Working-Set Model"></a>
+<a href="img53.html"><img src="thumb53.png" width="256" height="192" alt="Keeping Track of the Working Set"></a>
+<a href="img54.html"><img src="thumb54.png" width="256" height="192" alt="Page-Fault Frequency"></a>
+<a href="img55.html"><img src="thumb55.png" width="256" height="192" alt="Working Sets and Page Fault Rates"></a>
+<a href="img56.html"><img src="thumb56.png" width="256" height="192" alt="Memory-Mapped Files"></a>
+<a href="img57.html"><img src="thumb57.png" width="256" height="192" alt="Memory-Mapped File Technique for all I/O"></a>
+<a href="img58.html"><img src="thumb58.png" width="256" height="192" alt="Memory Mapped Files"></a>
+<a href="img59.html"><img src="thumb59.png" width="256" height="192" alt="Shared Memory via Memory-Mapped I/O"></a>
+<a href="img60.html"><img src="thumb60.png" width="256" height="192" alt="Shared Memory in Windows API"></a>
+<a href="img61.html"><img src="thumb61.png" width="256" height="192" alt="Allocating Kernel Memory"></a>
+<a href="img62.html"><img src="thumb62.png" width="256" height="192" alt="Buddy System"></a>
+<a href="img63.html"><img src="thumb63.png" width="256" height="192" alt="Buddy System Allocator"></a>
+<a href="img64.html"><img src="thumb64.png" width="256" height="192" alt="Slab Allocator"></a>
+<a href="img65.html"><img src="thumb65.png" width="256" height="192" alt="Slab Allocation"></a>
+<a href="img66.html"><img src="thumb66.png" width="256" height="192" alt="Slab Allocator in Linux"></a>
+<a href="img67.html"><img src="thumb67.png" width="256" height="192" alt="Slab Allocator in Linux (Cont.)"></a>
+<a href="img68.html"><img src="thumb68.png" width="256" height="192" alt="Other Considerations -- Prepaging"></a>
+<a href="img69.html"><img src="thumb69.png" width="256" height="192" alt="Other Issues – Page Size"></a>
+<a href="img70.html"><img src="thumb70.png" width="256" height="192" alt="Other Issues – TLB Reach "></a>
+<a href="img71.html"><img src="thumb71.png" width="256" height="192" alt="Other Issues – Program Structure"></a>
+<a href="img72.html"><img src="thumb72.png" width="256" height="192" alt="Other Issues – I/O interlock"></a>
+<a href="img73.html"><img src="thumb73.png" width="256" height="192" alt="Operating System Examples"></a>
+<a href="img74.html"><img src="thumb74.png" width="256" height="192" alt="Windows"></a>
+<a href="img75.html"><img src="thumb75.png" width="256" height="192" alt="Solaris "></a>
+<a href="img76.html"><img src="thumb76.png" width="256" height="192" alt="Solaris 2 Page Scanner"></a>
+<a href="img77.html"><img src="thumb77.png" width="256" height="192" alt="End of Chapter 9"></a>
+</td></tr></table></center>
+</body>
+</html>

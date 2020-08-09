@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Shared Memory in Windows API</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text59.html">Back</a> <a href="text61.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img60.html">Image</a></center><br>
+<h1><b><font color="#006699">Shared Memory in Windows API</b></font></h1>
+<ul>
+<li>First create a <b><font color="#3366FF">file mapping</b> </font>for file to be mapped</li>
+<ul>
+<li>Then establish a view of the mapped file in process’s virtual address space</li>
+</ul>
+<li>Consider producer / consumer</li>
+<ul>
+<li>Producer create shared-memory object using memory mapping features</li>
+<li>Open file via CreateFile(), returning a HANDLE</li>
+<li>Create mapping via CreateFileMapping() creating a <b><font color="#3366FF">named shared-memory object</b></font></li>
+<li>Create view via MapViewOfFile()</li>
+</ul>
+<li>Sample code in Textbook</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Page and Frame Replacement Algorithms</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text28.html">Back</a> <a href="text30.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img29.html">Image</a></center><br>
+<h1><b><font color="#006699">Page and Frame Replacement Algorithms</b></font></h1>
+<ul>
+<li><b><font color="#3366FF">Frame-allocation algorithm </b></font>determines </li>
+<ul>
+<li>How many frames to give each process</li>
+<li>Which frames to replace</li>
+</ul>
+<li><b><font color="#3366FF">Page-replacement algorithm</b></font></li>
+<ul>
+<li>Want lowest page-fault rate on both first access and re-access</li>
+</ul>
+<li>Evaluate algorithm by running it on a particular string of memory references (reference string) and computing the number of page faults on that string</li>
+<ul>
+<li>String is just page numbers, not full addresses</li>
+<li>Repeated access to the same page does not cause a page fault</li>
+<li>Results depend on number of frames available</li>
+</ul>
+<li>In all our examples, the <b><font color="#3366FF">reference string </b></font>of referenced page numbers is </li>
+<li>	               <b><font color="#FF0000">7,0,1,2,0,3,0,4,2,3,0,3,0,3,2,1,2,0,1,7,0,1</b></font></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Non-Uniform Memory Access</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text46.html">Back</a> <a href="text48.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img47.html">Image</a></center><br>
+<h1><b><font color="#006699">Non-Uniform Memory Access</b></font></h1>
+<ul>
+<li>So far all memory accessed equally</li>
+<li>Many systems are <b><font color="#3366FF">NUMA</b></font> – speed of access to memory varies</li>
+<ul>
+<li>Consider system boards containing CPUs and memory, interconnected over a system bus</li>
+</ul>
+<li>Optimal performance comes from allocating memory “close to” the CPU on which the thread is scheduled</li>
+<ul>
+<li>And modifying the scheduler to schedule the thread on the same system board when possible</li>
+<li>Solved by Solaris by creating <b><font color="#3366FF">lgroups </b></font></li>
+<ul>
+<li>Structure to track CPU / Memory low latency groups</li>
+<li>Used my schedule and pager</li>
+<li>When possible schedule all threads of a process and allocate all memory for that process within the lgroup</li>
+</ul>
+</ul>
+</ul>
+</body>
+</html>

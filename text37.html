@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>LRU Approximation Algorithms</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text36.html">Back</a> <a href="text38.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img37.html">Image</a></center><br>
+<h1><b><font color="#006699">LRU Approximation Algorithms</b></font></h1>
+<ul>
+<li>LRU needs special hardware and still slow</li>
+<li><b><font color="#3366FF">Reference bit</b></font></li>
+<ul>
+<li>With each page associate a bit, initially = 0</li>
+<li>When page is referenced bit set to 1</li>
+<li>Replace any with reference bit = 0 (if one exists)</li>
+<ul>
+<li>We do not know the order, however</li>
+</ul>
+</ul>
+<li><b><font color="#3366FF">Second-chance algorithm</b></font></li>
+<ul>
+<li>Generally FIFO, plus hardware-provided reference bit</li>
+<li><b><font color="#3366FF">Clock</b></font> replacement</li>
+<li>If page to be replaced has </li>
+<ul>
+<li>Reference bit = 0 -&gt; replace it</li>
+<li>reference bit = 1 then:</li>
+<ul>
+<li>set reference bit 0, leave page in memory</li>
+<li>replace next page, subject to same rules</li>
+</ul>
+</ul>
+</ul>
+</ul>
+</body>
+</html>

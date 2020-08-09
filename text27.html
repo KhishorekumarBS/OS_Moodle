@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Basic Page Replacement</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text26.html">Back</a> <a href="text28.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img27.html">Image</a></center><br>
+<h1><b><font color="#006699">Basic Page Replacement</b></font></h1>
+<ul>
+<li>Find the location of the desired page on disk
+</li>
+<li>Find a free frame:
+   -  If there is a free frame, use it
+   -  If there is no free frame, use a page replacement algorithm to select a <b><font color="#3366FF">victim</b> <b>frame
+	- </b></font>Write victim frame to disk if dirty
+</li>
+<li>Bring  the desired page into the (newly) free frame; update the page and frame tables
+</li>
+<li>Continue the process by restarting the instruction that caused the trap</li>
+<li>Note now potentially 2 page transfers for page fault – increasing EAT</li>
+</ul>
+</body>
+</html>

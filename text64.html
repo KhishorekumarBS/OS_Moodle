@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slab Allocator</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text63.html">Back</a> <a href="text65.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img64.html">Image</a></center><br>
+<h1><b><font color="#006699">Slab Allocator</b></font></h1>
+<ul>
+<li>Alternate strategy</li>
+<li><b><font color="#3366FF">Slab</b> </font>is one or more physically contiguous pages</li>
+<li><b><font color="#3366FF">Cache</b> </font>consists of one or more slabs</li>
+<li>Single cache for each unique kernel data structure</li>
+<ul>
+<li>Each cache filled with <b><font color="#3366FF">objects</b> </font>– instantiations of the data structure</li>
+</ul>
+<li>When cache created, filled with objects marked as <b>free</b></li>
+<li>When structures stored, objects marked as <b>used</b></li>
+<li>If slab is full of used objects, next object allocated from empty slab</li>
+<ul>
+<li>If no empty slabs, new slab allocated</li>
+</ul>
+<li>Benefits include no fragmentation, fast memory request satisfaction</li>
+</ul>
+</body>
+</html>

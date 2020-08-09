@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slab Allocator in Linux (Cont.)</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text66.html">Back</a> <a href="text68.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img67.html">Image</a></center><br>
+<h1><b><font color="#006699">Slab Allocator in Linux (Cont.)</b></font></h1>
+<ul>
+<li>Slab started in Solaris, now wide-spread for both kernel mode and user memory in various OSes</li>
+<li>Linux  2.2 had SLAB, now has both SLOB and SLUB allocators</li>
+<ul>
+<li>SLOB for systems with limited memory</li>
+<ul>
+<li>Simple List of Blocks – maintains 3 list objects for small, medium, large objects</li>
+</ul>
+<li>SLUB is performance-optimized SLAB removes per-CPU queues, metadata stored in page structure</li>
+</ul>
+</ul>
+</body>
+</html>

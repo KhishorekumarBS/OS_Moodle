@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Demand Paging Example</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text18.html">Back</a> <a href="text20.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img19.html">Image</a></center><br>
+<h1><b><font color="#006699">Demand Paging Example</b></font></h1>
+<ul>
+<li>Memory access time = 200 nanoseconds</li>
+<li>Average page-fault service time = 8 milliseconds</li>
+<li>EAT = (1 – p) x 200 + p (8 milliseconds) </li>
+<li>	        = (1 – p  x 200 + p x 8,000,000 </li>
+<li>              = 200 + p x 7,999,800</li>
+<li>If one access out of 1,000 causes a page fault, then</li>
+<li>         EAT = 8.2 microseconds. </li>
+<li>      This is a slowdown by a factor of 40!!</li>
+<li>If want performance degradation &lt; 10 percent</li>
+<ul>
+<li>220 &gt; 200 + 7,999,800 x p
+20 &gt; 7,999,800 x p</li>
+<li>p &lt; .0000025</li>
+<li>&lt; one page fault in every 400,000 memory accesses</li>
+</ul>
+<li>	</li>
+</ul>
+</body>
+</html>

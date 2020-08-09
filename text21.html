@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Copy-on-Write</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text20.html">Back</a> <a href="text22.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img21.html">Image</a></center><br>
+<h1><b><font color="#006699">Copy-on-Write</b></font></h1>
+<ul>
+<li><b><font color="#3366FF">Copy-on-Write </b></font>(COW) allows both parent and child processes to initially <i><b>share</b></i> the same pages in memory</li>
+<ul>
+<li>If either process modifies a shared page, only then is the page copied</li>
+</ul>
+<li>COW allows more efficient process creation as only modified pages are copied</li>
+<li>In general, free pages are allocated from a <b><font color="#3366FF">pool</b> </font>of <b><font color="#3366FF">zero-fill-on-demand </b></font>pages</li>
+<ul>
+<li>Pool should always have free frames for fast demand page execution</li>
+<ul>
+<li>Don’t want to have to free a frame as well as other processing on page fault</li>
+</ul>
+<li>Why zero-out a page before allocating it?</li>
+</ul>
+<li>vfork() variation on fork() system call has parent suspend and child using copy-on-write address space of parent</li>
+<ul>
+<li>Designed to have child call exec()</li>
+<li>Very efficient</li>
+</ul>
+</ul>
+</body>
+</html>

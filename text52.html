@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Working-Set Model</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text51.html">Back</a> <a href="text53.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img52.html">Image</a></center><br>
+<h1><b><font color="#006699">Working-Set Model</b></font></h1>
+<ul>
+<li>  working-set window  a fixed number of page references 
+Example:  10,000 instructions</li>
+<li><i>WSSi</i> (working set of Process <i>Pi</i>) =
+total number of pages referenced in the most recent  (varies in time)</li>
+<ul>
+<li>if  too small will not encompass entire locality</li>
+<li>if  too large will encompass several localities</li>
+<li>if  =   will encompass entire program</li>
+</ul>
+<li><i>D</i> =  <i>WSSi</i>  total demand frames </li>
+<ul>
+<li>Approximation of locality</li>
+</ul>
+<li>if <i>D</i> &gt; <i>m</i>  Thrashing</li>
+<li>Policy if <i>D</i> &gt; m, then suspend or swap out one of the processes </li>
+</ul>
+</body>
+</html>

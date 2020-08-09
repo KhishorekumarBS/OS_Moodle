@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Keeping Track of the Working Set</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#2D71B8" vlink="#145BA6" alink="#2D71B8">
+<center>
+<a href="text0.html">First page</a> <a href="text52.html">Back</a> <a href="text54.html">Continue</a> <a href="text77.html">Last page</a> <a href="ch9.html">Overview</a> <a href="img53.html">Image</a></center><br>
+<h1><b><font color="#006699">Keeping Track of the Working Set</b></font></h1>
+<ul>
+<li>Approximate with interval timer + a reference bit</li>
+<li>Example:  = 10,000</li>
+<ul>
+<li>Timer interrupts after every 5000 time units</li>
+<li>Keep in memory 2 bits for each page</li>
+<li>Whenever a timer interrupts copy and sets the values of all reference bits to 0</li>
+<li>If one of the bits in memory = 1  page in working set</li>
+</ul>
+<li>Why is this not completely accurate?</li>
+<li>Improvement = 10 bits and interrupt every 1000 time units</li>
+</ul>
+</body>
+</html>
